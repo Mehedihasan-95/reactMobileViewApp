@@ -8,9 +8,13 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <div className='flex justify-center items-center'>
+    <div className='w-96 h-50 border-2 overflow-hidden relative'>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </div>
+  </div>
 );
 
 // If you want to start measuring performance in your app, pass a function
