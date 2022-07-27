@@ -10,8 +10,8 @@ const root = ReactDOM.createRoot(
 root.render(
   <div className='flex justify-center items-center'>
     <div className='w-96 h-50 border-2 overflow-hidden relative'>
-      <React.StrictMode>
-        <App />
+      <React.StrictMode >
+      <App/>
       </React.StrictMode>
     </div>
   </div>
