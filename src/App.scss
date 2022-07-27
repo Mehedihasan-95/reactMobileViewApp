@@ -17,5 +17,14 @@
   -webkit-mask-composite: xor;
           mask-composite: exclude; 
 }
+.reward-btn{
+  background: #C7D3F3;
+  @apply shadow-2xl;
+  @apply hover:shadow-md;
+  @apply border-solid;
+  @apply border-4;
+  @apply rounded-full;
+  @apply border-white;
+}
 
 
