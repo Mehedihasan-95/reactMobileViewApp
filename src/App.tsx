@@ -26,7 +26,7 @@ function App() {
           <button className='text-sm flex items-center reward-btn px-4 py-2'>  <FaTrophy className='mr-2' /> <strong>রিওয়ার্ড</strong></button>
         </div>
 
-        <div className='bg-white rounded-2xl p-4 relative mt-8 shadow-md flex items-center justify-between'>
+        <div className='bg-white rounded-2xl p-4 relative mt-8 flex items-center justify-between reward-point-box'>
          <div>
           <p className='text-sm text-gray-400'>আপনার লেভেল :  Warrior</p>
           <h2 className='font-semibold'>রিওয়ার্ড পয়েন্ট ঃ ১৫০০</h2>
