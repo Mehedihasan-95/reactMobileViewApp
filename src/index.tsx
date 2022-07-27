@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './App';
+import PointReward from './point-reward';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -10,8 +11,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <div className='flex justify-center items-center'>
     <div className='w-96 h-50 border-2 overflow-hidden relative'>
-      <React.StrictMode >
-      <App/>
+      <React.StrictMode>
+      {/* <App/> */}
+      <PointReward/>
       </React.StrictMode>
     </div>
   </div>
