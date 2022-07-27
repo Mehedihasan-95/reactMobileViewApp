@@ -4,34 +4,53 @@ import { FaTrophy, FaAngleRight } from "react-icons/fa";
 function App() {
   const quizLists = [
     {
-      id:1,
+      id: 1,
       icon: require("./assets/img/play.png"),
-      name:"খেলাধুলা"
+      name: "খেলাধুলা"
     },
     {
-      id:2,
+      id: 2,
       icon: require("./assets/img/info.png"),
-      name:"তথ্যমূলক"
+      name: "তথ্যমূলক"
     },
     {
-      id:3,
+      id: 3,
       icon: require("./assets/img/idea.png"),
-      name:"গুগলি"
+      name: "গুগলি"
     },
     {
-      id:4,
+      id: 4,
       icon: require("./assets/img/globe.png"),
-      name:"আন্তর্জাতিক"
+      name: "আন্তর্জাতিক"
     },
     {
-      id:5,
+      id: 5,
       icon: require("./assets/img/bd.png"),
-      name:"বাংলাদেশ"
+      name: "বাংলাদেশ"
     },
     {
-      id:6,
+      id: 6,
       icon: require("./assets/img/war.png"),
-      name:"এন্টারটেইন"
+      name: "এন্টারটেইন"
+    },
+
+  ]
+  const menuIcons = [
+    {
+      id: 1,
+      icon: require('./assets/icons/home.png')
+    },
+    {
+      id: 2,
+      icon: require('./assets/icons/trofy.png')
+    },
+    {
+      id: 3,
+      icon: require('./assets/icons/apps.png')
+    },
+    {
+      id: 4,
+      icon: require('./assets/icons/menu.png')
     },
 
   ]
@@ -99,8 +118,8 @@ function App() {
             <FaAngleRight className='text-xl' />
           </div>
           <div className="grid grid-cols-3 gap-5">
-            {quizLists.map((categoryItems)=> {
-               return <QuizCategory key={categoryItems.id} categoryList={categoryItems} />
+            {quizLists.map((categoryItems) => {
+              return <QuizCategory key={categoryItems.id} categoryList={categoryItems} />
             })
             }
           </div>
@@ -109,8 +128,18 @@ function App() {
 
       </div>
 
-      <footer className=' absolute bottom-0'>
-        footer
+      <footer className='absolute bottom-0 w-full'>
+        <div className='nav-bar bg-white h-16'>
+          <div className='grid grid-cols-4 h-full gap-5'>
+            {menuIcons.map((icons) => {
+              return <div className='flex justify-center items-center'>
+                <img src={icons.icon} className="w-8" />
+              </div>
+            })
+
+            }
+          </div>
+        </div>
       </footer>
     </div>
   );
