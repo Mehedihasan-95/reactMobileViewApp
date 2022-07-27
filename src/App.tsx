@@ -1,7 +1,7 @@
 import './App.scss';
 import QuizCategory from './components/quiz-category/quiz-category'
 import { FaTrophy, FaAngleRight } from "react-icons/fa";
-function App() {
+const App = ()=> {
   const quizLists = [
     {
       id: 1,
