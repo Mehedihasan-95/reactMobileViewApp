@@ -9,7 +9,7 @@ function App() {
       </div>
       <div className='p-4'>
         {/* user & reward*/}
-        <div className='user-reward flex justify-between items-center relative pt-3'>
+        <div className='user-reward flex justify-between items-center relative py-5'>
           {/* user */}
           <div className='user flex items-center'>
             <div className='avatar'>
@@ -23,8 +23,20 @@ function App() {
             </div>
           </div>
           {/* reward button */}
-          <button className='text-sm flex items-center reward-btn px-4 py-2'>  <FaTrophy className='mr-2'/> <strong>রিওয়ার্ড</strong></button>
+          <button className='text-sm flex items-center reward-btn px-4 py-2'>  <FaTrophy className='mr-2' /> <strong>রিওয়ার্ড</strong></button>
         </div>
+
+        <div className='bg-white rounded-2xl p-4 relative mt-8 shadow-md flex items-center justify-between'>
+         <div>
+          <p className='text-sm text-gray-400'>আপনার লেভেল :  Warrior</p>
+          <h2 className='font-semibold'>রিওয়ার্ড পয়েন্ট ঃ ১৫০০</h2>
+         </div>
+         <div className='trofy'>
+          <img src={require('./assets/img/cup.png')} className="img-fluid w-14" />
+         </div>
+        </div>
+
+
       </div>
 
       <footer className=' absolute bottom-0'>
