@@ -5,6 +5,7 @@ import RewardList from "./components/reward-lists/reward-list";
 import './point-reward.scss'
 import MoreOptions from "./components/more-options/more-options";
 import Faq from "./components/faq/faq";
+import { useNavigate  } from 'react-router-dom';
 
 const PointReward = () => {
     const PointsReward = [
@@ -65,6 +66,10 @@ const PointReward = () => {
         },
 
     ]
+    const navigate = useNavigate ();
+    const navigateToHome = () => {
+      navigate('/');
+    };
 
     return (
         <div id='hello' className='body h-full p-4'>
@@ -79,7 +84,7 @@ const PointReward = () => {
                 </div>
             </div>
             <div className='header-nav flex items-center py-3'>
-                <BiLeftArrowAlt />
+                <button onClick={navigateToHome}><BiLeftArrowAlt/></button>
                 <p className='font-tatsam-medium text-xl ml-3'>পয়েন্ট রিওয়ার্ড</p>
             </div>
             <div className='status-box rounded-lg p-5 mb-6'>
