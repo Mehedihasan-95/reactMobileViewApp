@@ -31,7 +31,7 @@ const RewardList = ({ rewards }: any) => {
             </div>
 
             <button onClick={()=>{ onBtnClick(rewards.isBtnDisabled)}}
-            className={`font-tatsam-regular rounded-3xl px-4 py-2 ${rewards.isBtnDisabled ? 'text-gray-600 bg-gray-300' : ' text-white bg-secondary'}`}>{rewards.isVideoEnabled ? 'ভিডিও দেখুন' : 'সংগ্রহ করুন'}</button>
+            className={`font-tatsam-regular text-sm rounded-3xl px-4 py-2 ${rewards.isBtnDisabled ? 'text-gray-600 bg-gray-300' : ' text-white bg-secondary'}`}>{rewards.isVideoEnabled ? 'ভিডিও দেখুন' : 'সংগ্রহ করুন'}</button>
         </div>
 )}
 

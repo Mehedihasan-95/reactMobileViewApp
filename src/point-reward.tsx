@@ -3,19 +3,20 @@ import { BiWifi, BiLeftArrowAlt } from "react-icons/bi";
 import { BsBatteryFull } from "react-icons/bs";
 import RewardList from "./components/reward-lists/reward-list";
 import './point-reward.scss'
+import MoreOptions from "./components/more-options/more-options";
 
 const PointReward = () => {
     const PointsReward = [
         {
-            id:1,
+            id: 1,
             icon: require('./assets/icons/award.png'),
             title: 'মোবাইল রিচার্জ ২০ টাকা',
             point: '১০০০ পয়েন্ট',
             isBtnDisabled: false,
-            isVideoEnabled: false, 
+            isVideoEnabled: false,
         },
         {
-            id:2,
+            id: 2,
             icon: require('./assets/icons/lock.png'),
             title: 'মোবাইল রিচার্জ ৫০ টাকা ',
             point: '১৫০০ পয়েন্ট',
@@ -23,13 +24,32 @@ const PointReward = () => {
             isVideoEnabled: false,
         },
         {
-            id:3,
+            id: 3,
             icon: require('./assets/icons/play.png'),
             title: 'যেভাবে কাজ করে',
             point: 'বিস্তারিত দেখতে ক্লিক করুন',
             isBtnDisabled: false,
             isVideoEnabled: true,
         }
+    ]
+    const Options = [
+        {
+            id: 1,
+            title: 'নিয়মিত কুইজার্স গেম খেলে পয়েন্ট অর্জন করুন'
+        },
+        {
+            id: 2,
+            title: 'বিস্তারিত দেখতে আপনার কুইজার্স রিওয়ার্ড এ ট্যাপ করুন'
+        },
+        {
+            id: 3,
+            title: 'পয়েন্ট ব্যবহার করে বিভিন্ন রিওয়ার্ড সংগ্রহ করুন এবং তার সুবিধা উপভোগ করুন'
+        },
+        {
+            id: 4,
+            title: 'পরবর্তী রিওয়ার্ড লেভেল এবং দারুন সব অফার আনলক করতে বেশি বেশি পয়েন্ট অর্জন করুন'
+        },
+
     ]
     return (
         <div className='body h-full p-4'>
@@ -47,7 +67,7 @@ const PointReward = () => {
                 <BiLeftArrowAlt />
                 <p className='font-tatsam-medium text-xl ml-3'>পয়েন্ট রিওয়ার্ড</p>
             </div>
-            <div className='status-box rounded-lg p-5'>
+            <div className='status-box rounded-lg p-5 mb-6'>
                 <div className='flex justify-between'>
                     <p className='font-tatsam-regular text-md text-white'>ইশতিয়াক আহমেদ</p>
                     <div className='flex items-center'>
@@ -63,18 +83,32 @@ const PointReward = () => {
                 </div>
             </div>
 
-            <div className='nav-header-title py-6'>
-                <div className=' flex justify-between items-center'>
-                    <p className='font-tatsam-regualar text-md'>পয়েন্ট রিওয়ার্ড</p>
-                    <p className='font-tatsam-regualar text-sm'>সব দেখুন</p>
-                </div>
-            </div>
+            <div className="scroll-view-contents overflow-y-auto h-96">
 
-            <div>
-                {PointsReward.map((rewards)=>{
-                    return <RewardList key={rewards.id} rewards={rewards}/>;
-                }
-                )}
+                <div className='nav-header-title pb-6'>
+                    <div className=' flex justify-between items-center'>
+                        <p className='font-tatsam-medium text-lg'>পয়েন্ট রিওয়ার্ড</p>
+                        <p className='font-tatsam-regualar text-sm'>সব দেখুন</p>
+                    </div>
+                </div>
+
+                <div className="point-lists">
+                    {PointsReward.map((rewards) => {
+                        return <RewardList key={rewards.id} rewards={rewards} />;
+                    }
+                    )}
+                </div>
+
+                <div className="more-options py-3">
+                    {Options.map((options)=>{
+                        return <MoreOptions key={options.id} options={options} />;
+                    }
+                    )}
+                </div>
+
+                <div className="faq">
+
+                </div>
             </div>
         </div>
     )
