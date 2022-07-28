@@ -10,11 +10,11 @@ const RewardList = ({ rewards }: any) => {
         iconBgClass = 'bg-3'
     }
 
-    function p(x:any) {
-        if (x) {
+    const onBtnClick = (param:any)=> {
+        if (param) {
             alert(1)
         } else {
-            alert(2)
+            alert('সংগ্রহিত হয়েছে!')
         }
     }
     return (
@@ -30,7 +30,7 @@ const RewardList = ({ rewards }: any) => {
                 </div>
             </div>
 
-            <button onClick={()=>{ p(rewards.isBtnDisabled)}}
+            <button onClick={()=>{ onBtnClick(rewards.isBtnDisabled)}}
             className={`font-tatsam-regular rounded-3xl px-4 py-2 ${rewards.isBtnDisabled ? 'text-gray-600 bg-gray-300' : ' text-white bg-secondary'}`}>{rewards.isVideoEnabled ? 'ভিডিও দেখুন' : 'সংগ্রহ করুন'}</button>
         </div>
 )}
