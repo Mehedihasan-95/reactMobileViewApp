@@ -4,6 +4,7 @@ import { BsBatteryFull } from "react-icons/bs";
 import RewardList from "./components/reward-lists/reward-list";
 import './point-reward.scss'
 import MoreOptions from "./components/more-options/more-options";
+import Faq from "./components/faq/faq";
 
 const PointReward = () => {
     const PointsReward = [
@@ -48,6 +49,19 @@ const PointReward = () => {
         {
             id: 4,
             title: 'পরবর্তী রিওয়ার্ড লেভেল এবং দারুন সব অফার আনলক করতে বেশি বেশি পয়েন্ট অর্জন করুন'
+        },
+
+    ]
+    const faqList =[
+        {
+            id:1,
+            icon: require('./assets/icons/help.png'),
+            title: 'সচরাচর জিজ্ঞাসা'
+        },
+        {
+            id:2,
+            icon: require('./assets/icons/rules.png'),
+            title: 'শর্তাবলী'
         },
 
     ]
@@ -106,8 +120,12 @@ const PointReward = () => {
                     )}
                 </div>
 
-                <div className="faq">
-
+                <div className="faq pt-3">
+                    {
+                        faqList.map((faqs)=>{
+                            return <Faq key={faqs.id} faqs={faqs} />                            
+                        })
+                    }
                 </div>
             </div>
         </div>
