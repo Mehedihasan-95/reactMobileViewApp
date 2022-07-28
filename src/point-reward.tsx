@@ -65,8 +65,9 @@ const PointReward = () => {
         },
 
     ]
+
     return (
-        <div className='body h-full p-4'>
+        <div id='hello' className='body h-full p-4'>
             <div className='header-top-icon'>
                 <div className='flex justify-between items-center'>
                     <div>9:41</div>
