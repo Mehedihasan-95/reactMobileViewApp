@@ -1,7 +1,8 @@
 import './App.scss';
 import QuizCategory from './components/quiz-category/quiz-category'
 import { FaTrophy, FaAngleRight } from "react-icons/fa";
-const App = ()=> {
+import { useNavigate  } from 'react-router-dom';
+const App = () => {
   const quizLists = [
     {
       id: 1,
@@ -54,6 +55,12 @@ const App = ()=> {
     },
 
   ]
+
+  const navigate = useNavigate ();
+  const navigateToPointReward = () => {
+    navigate('/pointReward');
+  };
+
   return (
     <div className="App">
       <div className='header'>
@@ -77,7 +84,8 @@ const App = ()=> {
             </div>
           </div>
           {/* reward button */}
-          <button className='text-sm flex items-center reward-btn px-4 py-2'>  <FaTrophy className='mr-2' /> <strong className='font-tatsam-regular'>রিওয়ার্ড</strong></button>
+          <button onClick={navigateToPointReward} className='text-sm flex items-center reward-btn px-4 py-2'>  <FaTrophy className='mr-2' /> <strong className='font-tatsam-regular'>রিওয়ার্ড</strong>
+          </button>
         </div>
 
         {/* reward point*/}
@@ -133,7 +141,7 @@ const App = ()=> {
           <div className='grid grid-cols-4 h-full gap-5'>
             {menuIcons.map((icons) => {
               return <div className='flex justify-center items-center'>
-                <img src={icons.icon} className="w-8" />
+                <img src={icons.icon} key={icons.id} className="w-8" />
               </div>
             })
 
@@ -143,6 +151,7 @@ const App = ()=> {
       </footer>
     </div>
   );
-}
+  }
+
 
 export default App;

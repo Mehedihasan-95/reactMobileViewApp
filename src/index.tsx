@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route, } from 'react-router-dom';
 import './index.scss';
 import App from './App';
-import PointReward from './point-reward';
 import reportWebVitals from './reportWebVitals';
+import PointReward from './point-reward';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -12,8 +13,12 @@ root.render(
   <div className='flex justify-center items-center'>
     <div className='w-96 h-50 border-2 overflow-hidden relative'>
       <React.StrictMode>
-      {/* <App/> */}
-      <PointReward/>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<App />} />
+            <Route path="pointReward" element={<PointReward />} />
+          </Routes>
+        </BrowserRouter>
       </React.StrictMode>
     </div>
   </div>
