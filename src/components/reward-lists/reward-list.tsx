@@ -47,6 +47,7 @@ const RewardList = ({ rewards }: any) => {
                         position: 'absolute',
                         margin: 'auto',
                         width: '24rem',
+                        height: '50rem',
                         right: 0,
                         left: 0,
                         bottom: 0,

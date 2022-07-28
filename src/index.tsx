@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <div className='flex justify-center items-center'>
+  <div className='flex justify-center items-center h-screen'>
     <div className='w-96 h-50 border-2 overflow-hidden relative'>
       <React.StrictMode>
         <BrowserRouter>
