@@ -97,7 +97,7 @@ const PointReward = () => {
                 </div>
             </div>
 
-            <div className="scroll-view-contents overflow-y-auto h-96">
+            <div className="scroll-view-contents overflow-y-auto">
 
                 <div className='nav-header-title pb-6'>
                     <div className=' flex justify-between items-center'>
@@ -120,7 +120,7 @@ const PointReward = () => {
                     )}
                 </div>
 
-                <div className="faq pt-3">
+                <div className="faq py-3">
                     {
                         faqList.map((faqs)=>{
                             return <Faq key={faqs.id} faqs={faqs} />                            
